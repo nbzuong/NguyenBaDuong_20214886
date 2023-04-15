@@ -1,4 +1,5 @@
 # OOP_Lab_2022.2
 
-### Họ và Tên: Nguyễn Bá Dương
-### MSSV: 20214886
+## Full Name: Nguyễn Bá Dương
+
+## Student ID: 20214886
