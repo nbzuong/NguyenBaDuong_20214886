@@ -12,9 +12,10 @@ public class JavaOperators {
 		
 		//Get output
 		System.out.println("sum of num1 and num2: " +(num1 + num2));
-		System.out.println("difference of num1 and num2: " +(num1 - num2));
+		System.out.println("difference of num1 and num2: " +java.lang.Math.abs((num1 - num2)));
 		System.out.println("product of num1 and num2: " +(num1 * num2));	
 		System.out.println("quotient of num1 and num2: " +(num1 / num2));
+		input.close();
 		}
-}
+	}
 		
