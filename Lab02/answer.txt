@@ -1,0 +1,7 @@
+Exercise 7:
+	Accessor methods, also known as getters and setters, are used to access or modify the values of private instance variables of a class. They should be used when we want to provide controlled access to the private fields of a class while enforcing encapsulation.
+	But we shouldn't use accessor methods unless absolutely necessary because these methods expose information about how a class is implemented and as a consequence make your code harder to maintain.
+
+Exercise 8:
+	Yes, Java allows us to create multiple constructor methods with the same name but with different parameters. This is called overloading method.
+
