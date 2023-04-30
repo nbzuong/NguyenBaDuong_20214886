@@ -7,6 +7,7 @@ public class StarTriangle {
 		//Get input
 		System.out.print("Enter the height of the triangle n= ");
 		int n = height.nextInt();
+		
 		if (n<=0) {
 			System.out.print("The height must larger than 0");
 		}
