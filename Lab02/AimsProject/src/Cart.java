@@ -1,6 +1,6 @@
 
 public class Cart {
-	public int qtyOrdered = 0;
+	private int qtyOrdered = 0;
 	public static final int MAX_NUMBER_ORDERED = 20;
 	
 	private DigitalVideoDisc itemsOrdered[] = 
