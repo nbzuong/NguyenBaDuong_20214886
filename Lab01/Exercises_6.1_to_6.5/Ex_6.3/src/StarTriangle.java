@@ -21,6 +21,6 @@ public class StarTriangle {
 				System.out.println();
 			}	
 		}
-	height.close();
+		height.close();
 	}
 }
