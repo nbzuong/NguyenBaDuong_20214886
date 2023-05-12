@@ -36,6 +36,7 @@ public class Cart {
 	        System.out.println("The disc has been added.");
 	    }
 	}
+	
 	//2.2. Overloading by differing the number of parameters
 	public void addDigitalVideoDisc(DigitalVideoDisc dvd1,DigitalVideoDisc dvd2) {
 		itemsOrdered[qtyOrdered] = dvd1;
@@ -46,7 +47,6 @@ public class Cart {
 		qtyOrdered++;
 	}
 
-	
 	//Remove disc
 	public void removeDigitalVideoDisc(DigitalVideoDisc disc) {
 	    boolean found = false;
@@ -76,4 +76,49 @@ public class Cart {
         }
         return total;
     }
+
+	//Print cart method
+	public void printCart() {
+		System.out.println("***********************CART***********************");
+		System.out.println("Ordered Items:");
+		for (int i = 0 ; i < qtyOrdered; i++) {
+			System.out.println((i+1) + itemsOrdered[i].toString());
+		}
+		System.out.println("Total cost: $" + totalCost());
+		System.out.println("***************************************************");
+	}
+
+	//Search for DVDs in the cart by ID and display them
+	//Notify to user if no match is found
+	public void searchID(int id){
+		boolean found = false;
+		for (int i = 0; i < qtyOrdered; i++) {
+			if (itemsOrdered[i].getId() == id) {
+				found = true;
+				System.out.println("DVD found: ");
+				System.out.println(itemsOrdered[i].toString());
+				break;
+			}
+		}
+		if (!found) {
+			System.out.println("No match is found!");
+		}
+	}
+
+	//Search for DVDs in the cart by title and display them
+	//Notify to user if no match is found
+	public void searchTitle(String title){
+		boolean found = false;
+		for (int i = 0; i < qtyOrdered; i++) {
+			if (itemsOrdered[i].getTitle().equals(title)) {
+				found = true;
+				System.out.println("DVD found: ");
+				System.out.println(itemsOrdered[i].toString());
+				break;
+			}
+		}
+		if (!found) {
+			System.out.println("No match is found!");
+		}
+	}
 }

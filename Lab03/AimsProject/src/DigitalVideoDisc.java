@@ -76,6 +76,10 @@ public class DigitalVideoDisc {
 		return id;
 	}
 	
+	//toString method
+	public String toString() {
+		return ". DVD - " + title + " - " + category + " - " + director + " - " + length + ": " + cost + "$";
+	}
 }
 
 
