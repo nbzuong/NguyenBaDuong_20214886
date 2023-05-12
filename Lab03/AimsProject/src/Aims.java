@@ -21,6 +21,10 @@ public class Aims {
 		//Test the method addDigitalVideoDisc which allows to pass an arbitrary number of arguments for dvd
 		anOrder.addDigitalVideoDisc(dvd1, dvd2, dvd3);
 		
+		//Test setting ID for disc exercise 5
+		System.out.println(dvd1.getId());
+		System.out.println(dvd2.getId());
+		
 		//To check if the remove method runs properly
 		anOrder.removeDigitalVideoDisc(dvd2);
 		anOrder.removeDigitalVideoDisc(dvd2);
