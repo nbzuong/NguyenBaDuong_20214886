@@ -33,15 +33,5 @@ public class Aims {
 		System.out.println("Total cost is: ");
 		System.out.println(anOrder.totalCost());
 		
-		//Test search by ID method
-		anOrder.searchID(0);
-		anOrder.searchID(1);
-
-		//Test search by title method
-		anOrder.searchTitle("The Lion King");
-		anOrder.searchTitle("Galaxy Wars");
-
-		//Test the printCart method
-		anOrder.printCart();
 	}
 }
