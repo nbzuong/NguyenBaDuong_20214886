@@ -1,0 +1,1 @@
+2.1 I think I prefer the method addDigitalVideoDisc which allows to pass an arbitrary number of arguments for dvd because I don't have to create another array just to save dvd in order to add to the cart array.
