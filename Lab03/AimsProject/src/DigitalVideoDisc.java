@@ -20,6 +20,11 @@ public class DigitalVideoDisc {
 	public float getCost() {
 		return cost;
 	}
+
+	//Temporary method to set title for exercise 3
+	public void setTitle(String title) {
+		this.title = title;
+	}
 	
 	//Create a DVD object by title
 	public DigitalVideoDisc (String title) {

@@ -1,1 +1,6 @@
-2.1 I think I prefer the method addDigitalVideoDisc which allows to pass an arbitrary number of arguments for dvd because I don't have to create another array just to save dvd in order to add to the cart array.
+2.1. I think I prefer the method addDigitalVideoDisc which allows to pass an arbitrary number of arguments for dvd because I don't have to create another array just to save dvd in order to add to the cart array.
+
+3.
+- Java is pass-by-value
+- After the call of swap(jungleDVD, cinderellaDVD), the values of their references are copied into the parameters o1 and o2 respectively. Inside the swap method, the references o1 and o2 are swapped. However, this only affects the local variables o1 and o2 within the swap method. The original references jungleDVD and cinderellaDVD in the main method are not modified, and that's why the titles remain unchanged in the main method after calling swap(jungleDVD, cinderellaDVD).
+- After the call of changeTitle(jungleDVD, cinderellaDVD.getTitle()), the title of the JungleDVD changed. The reason is that Java object variables are simply references that point to real objects in the memory heap. Therefore, even though Java passes parameters to methods by value, if the variable points to an object reference, the real object will also be changed.
