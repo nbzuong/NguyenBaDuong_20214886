@@ -4,3 +4,10 @@ Class Cart and Store are the aggregates of class Media.
 
 10. If the passing object is not an instance of Media, what happens?
 If the passing object is not an instance of Media, a ClassCastException will be thrown. This is because the cast will try to convert an object of a different type to a Media object, which is not possible.
+
+11. The output is:
+ID - 0. CD - null - null - null - null - 0s - $0.0
+ID - 0. DVD - null - null - null - 0s - $0.0
+ID - 0. Book - null - null - [] - $0.0
+
+The toString() method is overridden in a subclass to provide a more meaningful or customized string representation of the object.

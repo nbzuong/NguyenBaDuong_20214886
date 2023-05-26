@@ -34,4 +34,8 @@ public class Book extends Media {
 			System.out.println(authorName+" has been removed from the list");
 		}
 	}
+	
+	public String toString() {
+		return "ID - "+ getId()+ ". Book - " + getTitle() + " - " + getCategory() + " - " + getAuthors() + " - $" + getCost();
+	}
 }
