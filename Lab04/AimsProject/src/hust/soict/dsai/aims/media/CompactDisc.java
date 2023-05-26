@@ -2,21 +2,28 @@ package hust.soict.dsai.aims.media;
 
 import java.util.ArrayList;
 
-public class CompactDisc extends Disc {
+public class CompactDisc extends Disc implements Playable {
 	private String artist;
-	private ArrayList<String> tracks = new ArrayList<String>();
+	private ArrayList<Track> tracks = new ArrayList<Track>();
 	
 	public CompactDisc() {
 		super();
 	}
 	
-	public CompactDisc(String artist, ArrayList<String> tracks) {
+	public CompactDisc(String artist, ArrayList<Track> tracks) {
 		super();
 		this.artist = artist;
 		this.tracks = tracks;
 	}
 	
-	public void addTrack(String track) {
+	public void play() {
+		for (Track track : tracks) {
+			System.out.println("Playing DVD: " + track.getTitle());
+			System.out.println("DVD length: " + track.getLength());
+		}
+	}
+	
+	public void addTrack(Track track) {
 		if(!tracks.contains(track)) {
 			tracks.add(track);
 			System.out.println(track+" has been added");
@@ -24,7 +31,7 @@ public class CompactDisc extends Disc {
 		System.out.println(track+" is already in the track list");
 	}
 	
-	public void removeTrack(String track) {
+	public void removeTrack(Track track) {
 		if(!tracks.contains(track)) {
 			System.out.println(track+" is not in the track list");
 		}
@@ -35,12 +42,12 @@ public class CompactDisc extends Disc {
 	}
 	
 	public int getLength() {
-		int length = 0;
-		for (int i=0; i< tracks.size();i++) {
-			length += tracks[i].getLength();
-		}
-		return length;
-	}
+        int totalLength = 0;
+        for (Track track : tracks) {
+            totalLength += track.getLength();
+        }
+        return totalLength;
+    }
 	
 	public String getArtist() {
 		return artist;
