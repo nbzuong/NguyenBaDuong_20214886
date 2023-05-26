@@ -1,0 +1,6 @@
+9. Which classes are aggregates of other classes?
+Class CompactDisc is the aggregate of class Track.
+Class Cart and Store are the aggregates of class Media.
+
+10. If the passing object is not an instance of Media, what happens?
+If the passing object is not an instance of Media, a ClassCastException will be thrown. This is because the cast will try to convert an object of a different type to a Media object, which is not possible.
