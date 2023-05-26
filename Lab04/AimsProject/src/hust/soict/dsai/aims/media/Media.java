@@ -37,5 +37,11 @@ public abstract class Media {
 	public void setCost(float cost) {
 		this.cost = cost;
 	}
-
+	
+	public boolean equals(Media media) {
+		if (this.getTitle()==media.getTitle()) {
+			return true;
+		}
+		return false;
+	}
 }
