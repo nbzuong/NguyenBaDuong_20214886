@@ -8,6 +8,11 @@ public class Book extends Media {
 	public Book() {
 		super();
 	}
+	
+	public Book(List<String> authors) {
+		super();
+		this.authors = authors;
+	}
 
 	public List<String> getAuthors() {
 		return authors;
