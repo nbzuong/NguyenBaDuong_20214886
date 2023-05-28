@@ -6,9 +6,9 @@
 	If the passing object is not an instance of Media, a ClassCastException will be thrown. This is because the cast will try to convert an object of a different type to a Media object, which is not possible.
 
 11. The output is:
-	ID - 0. CD - superman - null - null - null - 0s - $305.5
-	ID - 0. DVD - starWar - null - null - 0s - $1563.6
-	ID - 0. Book - khonggiadinh - null - [] - $55.6
+	ID - 5. Book - khonggiadinh - slice of life - [] - $55.6
+	ID - 1. DVD - starWar - action - null - 0s - $1563.6
+	ID - 3. CD - superman - action - null - null - 0s - $305.5
 The toString() method is overridden in a subclass to provide a more meaningful or customized string representation of the object.
 
 12.

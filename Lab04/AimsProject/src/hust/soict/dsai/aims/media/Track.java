@@ -1,8 +1,14 @@
 package hust.soict.dsai.aims.media;
 
 public class Track extends CompactDisc implements Playable {
-	private String title;
+	private String titleTrack;
 	private int length;
+	
+	public Track(int id, String title, String category, float cost, String titleTrack, int length) {
+		super(id, title, category, cost);
+		this.titleTrack = titleTrack;
+		this.length = length;
+	}
 	
 	public void play() {
 		System.out.println("Playing DVD: " + this.getTitle());
@@ -10,21 +16,15 @@ public class Track extends CompactDisc implements Playable {
 	}
 	
 	public String getTitle() {
-		return title;
+		return titleTrack;
 	}
 	public void setTitle(String title) {
-		this.title = title;
+		this.titleTrack = title;
 	}
 	public int getLength() {
 		return length;
 	}
 	public void setLength(int length) {
-		this.length = length;
-	}
-	
-	public Track(String title, int length) {
-		super();
-		this.title = title;
 		this.length = length;
 	}
 	

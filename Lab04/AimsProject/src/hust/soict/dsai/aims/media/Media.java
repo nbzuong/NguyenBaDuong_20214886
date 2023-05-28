@@ -15,10 +15,6 @@ public abstract class Media {
 	public static final Comparator<Media> COMPARE_BY_COST_TITLE	=
 			new MediaComparatorByCostTitle();
 	
-	public Media() {
-		super();
-	}
-	
 	public Media(int id, String title, String category, float cost) {
 		super();
 		this.id = id;
@@ -68,16 +64,9 @@ public abstract class Media {
 	public static void main(String[] args) {
 	    ArrayList<Media> mediae = new ArrayList<>();
 	    
-	    CompactDisc cd = new CompactDisc();
-	    cd.setTitle("superman");
-	    cd.setCost(305.5f);
-	    DigitalVideoDisc dvd = new DigitalVideoDisc();
-	    dvd.setTitle("starWar");
-	    dvd.setCost(1563.6f);
-	    Book book = new Book();
-	    book.setTitle("khonggiadinh");
-	    book.setCost(55.6f);
-	    
+	    CompactDisc cd = new CompactDisc(3,"superman","action",305.5f);
+	    DigitalVideoDisc dvd = new DigitalVideoDisc(1,"starWar", "action", 1563.6f );
+	    Book book = new Book(5,"khonggiadinh", "slice of life", 55.6f);
 	    
 	    // Add some media objects to the list
 	    mediae.add(cd);
@@ -89,7 +78,6 @@ public abstract class Media {
 	    for (Media media : mediae) {
 	        System.out.println(media.toString());
 	    }
-	    
 	}
 }
 

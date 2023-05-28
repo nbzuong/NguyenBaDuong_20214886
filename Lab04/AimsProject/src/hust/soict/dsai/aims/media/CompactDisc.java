@@ -6,16 +6,16 @@ public class CompactDisc extends Disc implements Playable {
 	private String artist;
 	private ArrayList<Track> tracks = new ArrayList<Track>();
 	
-	public CompactDisc() {
-		super();
+	public CompactDisc(int id, String title, String category, float cost) {
+		super(id, title, category, cost);
 	}
 	
-	public CompactDisc(String artist, ArrayList<Track> tracks) {
-		super();
+	public CompactDisc(int id, String title, String category, float cost, String artist, ArrayList<Track> tracks) {
+		super(id, title, category, cost);
 		this.artist = artist;
 		this.tracks = tracks;
 	}
-	
+
 	public void play() {
 		for (Track track : tracks) {
 			System.out.println("Playing DVD: " + track.getTitle());

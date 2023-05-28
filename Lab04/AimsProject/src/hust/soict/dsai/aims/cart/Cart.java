@@ -29,7 +29,10 @@ public class Cart {
 	        System.out.println(media.getTitle() + " is not in the cart");
 	    }
 	}
-
+	
+	public ArrayList<Media> getItemsInCart(){
+		return itemsOrdered;
+	}
 	
 	
 	//Get total cost
