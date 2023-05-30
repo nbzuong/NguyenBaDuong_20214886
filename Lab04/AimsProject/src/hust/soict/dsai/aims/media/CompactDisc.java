@@ -17,9 +17,10 @@ public class CompactDisc extends Disc implements Playable {
 	}
 
 	public void play() {
+		System.out.println("Playing CD: " + this.getTitle());
+		System.out.println("CD length: " + this.getLength());
 		for (Track track : tracks) {
-			System.out.println("Playing DVD: " + track.getTitle());
-			System.out.println("DVD length: " + track.getLength());
+			track.play();
 		}
 	}
 	

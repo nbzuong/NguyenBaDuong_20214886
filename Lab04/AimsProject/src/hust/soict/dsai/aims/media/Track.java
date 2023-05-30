@@ -28,9 +28,12 @@ public class Track extends CompactDisc implements Playable {
 		this.length = length;
 	}
 	
-	public boolean equals(Track track) {
-		if (this.getTitle()==track.getTitle() && this.getLength()==track.getLength()) {
-			return true;
+	public boolean equals(Object obj) {
+		if (obj instanceof Track) {
+			Track track = (Track) obj;
+			if (this.titleTrack.equals(track.titleTrack) && this.length == track.length) {
+				return true;
+			}
 		}
 		return false;
 	}

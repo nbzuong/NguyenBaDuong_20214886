@@ -55,12 +55,16 @@ public abstract class Media {
 		this.cost = cost;
 	}
 	
-	public boolean equals(Media media) {
-		if (this.getTitle()==media.getTitle()) {
-			return true;
+	public boolean equals(Object obj) {
+		if (obj instanceof Media) {
+			Media media = (Media) obj;
+			if (this.id == media.id) {
+				return true;
+			}
 		}
 		return false;
 	}
+	
 	public static void main(String[] args) {
 	    ArrayList<Media> mediae = new ArrayList<>();
 	    
