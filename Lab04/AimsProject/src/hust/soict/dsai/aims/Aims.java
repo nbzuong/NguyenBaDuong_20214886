@@ -78,12 +78,15 @@ public class Aims {
 	        switch (option) {
 	            case 1:
 	                seeMediaDetails(aims);
+	                storeMenu();
 	                break;
 	            case 2:
 	                addMediaCart(aims);
+	                storeMenu();
 	                break;
 	            case 3:
 	                playMedia(aims, store);
+	                storeMenu();
 	                break;
 	            case 4:
 	                seeCurrentCart(aims);
@@ -110,15 +113,19 @@ public class Aims {
 	        switch (option) {
 	            case 1:
 	                filterMediaCart(aims);
+	                cartMenu();
 	                break;
 	            case 2:
 	                sortMediaCart(aims);
+	                cartMenu();
 	                break;
 	            case 3:
 	                removeMediaCart(aims);
+	                cartMenu();
 	                break;
 	            case 4:
 	                playMedia(aims, cart);
+	                cartMenu();
 	                break;
 	            case 5:
 	                placeOrder();
@@ -199,7 +206,6 @@ public class Aims {
 		int found = findIndex(title, store);
 		if (found == -1) {
 			System.out.println("Can not find the media!");
-			storeMenu();
 		}
 		else {
 			store.getItemsInStore().get(found).toString();
@@ -213,12 +219,11 @@ public class Aims {
 		int found = findIndex(title, store);
 		if (found == -1) {
 			System.out.println("Can not find the media!");
-			storeMenu();
 		}
 		else {
 			cart.addMedia(store.getItemsInStore().get(found));
 			System.out.println("Item has been added to the cart!");
-		}	
+		}
 	}
 	
 	public static ArrayList<Media> filterMediaCart(Scanner aims) {
@@ -278,12 +283,17 @@ public class Aims {
 	public static void removeMediaCart(Scanner aims) {
 		System.out.println("Please enter the media's title to remove: ");
 		String title = aims.nextLine();
-		cart.removeMedia(cart.getItemsInCart().get(findIndex(title, cart)));
+		int index = findIndex(title, cart);
+			if (index!=-1) {
+				cart.removeMedia(cart.getItemsInCart().get(index));
+			}
+			System.out.println("Can not find media in cart");	
 	}
 	
 	public static void placeOrder() {
 		System.out.println("Order is created!");
 		cart.getItemsInCart().clear();
+		showMenu();
 	}
 	
 	
