@@ -1,8 +1,8 @@
 package hust.soict.dsai.aims.screen;
 
+import java.awt.Color;
 import java.awt.FlowLayout;
 import java.awt.Font;
-import java.awt.Color;
 
 import javax.swing.BorderFactory;
 import javax.swing.Box;
